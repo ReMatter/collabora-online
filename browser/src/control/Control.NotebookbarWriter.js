@@ -661,6 +661,13 @@ L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 										'accessibility': { focusBack: true, 	combination: '4',	de: '4' }
 									},
 									{
+										'id': 'home-shadowed',
+										'type': 'toolitem',
+										'text': _UNO('.uno:Shadowed'),
+										'command': '.uno:Shadowed',
+										'accessibility': { focusBack: true, combination: 'SH', de: null }
+									},
+									{
 										'id': 'home-subscript',
 										'type': 'toolitem',
 										'text': _UNO('.uno:SubScript'),
@@ -673,6 +680,19 @@ L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 										'text': _UNO('.uno:SuperScript'),
 										'command': '.uno:SuperScript',
 										'accessibility': { focusBack: true, 	combination: '6',	de: '6' }
+									},
+									{
+										'id': 'home-hyphenate:HyphenateMenu',
+										'type': 'toolbox',
+										'children': [
+											{
+												'id': 'home-hyphenate',
+												'type': 'toolitem',
+												'text': _UNO('.uno:Hyphenate'),
+												'command': '.uno:Hyphenate',
+												'accessibility': { focusBack: true,	combination: 'HH', de: null }
+											}
+										]
 									},
 									{
 										'id': 'home-spacing:CharSpacingMenu',
@@ -699,7 +719,7 @@ L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 										'text': _UNO('.uno:Color'),
 										'command': '.uno:Color',
 										'accessibility': { focusBack: true,	combination: 'FC',	de: null }
-									}
+									},
 								]
 							}
 						],
