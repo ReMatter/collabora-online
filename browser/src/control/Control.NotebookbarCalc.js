@@ -1038,6 +1038,14 @@ L.Control.NotebookbarCalc = L.Control.NotebookbarWriter.extend({
 				'enabled': 'true',
 				'accessibility': { focusBack: true,	combination: 'PO', de: null }
 			},
+			{
+				'id': 'Data-SizeMenu:MenuPageSizes',
+				'class': 'unoData-SizeMenu',
+				'type': 'menubutton',
+				'text': _UNO('.uno:SizeMenu', 'spreadsheet'),
+				'enabled': 'true',
+				'accessibility': { focusBack: true,	combination: 'PS', de: null }
+			},
 			{ type: 'separator', id: 'layout-printrangesmenu-break', orientation: 'vertical' },
 			{
 				'id': 'Data-RowMenuHeight:MenuRowHeight',
