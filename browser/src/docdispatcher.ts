@@ -336,6 +336,10 @@ class Dispatcher {
 		this.actionsMap['gotopage'] = () => {
 			app.map.sendUnoCommand('.uno:GotoPage');
 		};
+
+		this.actionsMap['gotosheet'] = () => {
+			app.map.sendUnoCommand('.uno:JumpToTable');
+		};
 	}
 
 	private addExportCommands() {
