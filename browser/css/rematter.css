@@ -1,0 +1,375 @@
+:root {
+	/* Ink Pigments */
+	--raw-white: 255, 255, 255;
+	--raw-black: 14, 21, 32;
+
+	--ink-neutral: var(--raw-black);
+	--ink-white: var(--raw-white);
+	--ink-abs-white: var(--raw-white);
+	--ink-space: var(--raw-white);
+
+	/* Semantic Pigments */
+	--ink-primary: 39, 103, 231;
+	--ink-primary-darker: 22, 80, 197;
+
+	--ink-success: 28, 176, 132;
+	--ink-success-darker: 21, 132, 99;
+
+	--ink-warning: 255, 136, 0;
+	--ink-warning-darker: 204, 109, 0;
+
+	--ink-failure: 217, 38, 38;
+	--ink-failure-darker: 173, 31, 31;
+
+	/* Mnemonic Pigments */
+	--ink-brown: 179, 145, 128;
+	--ink-brown-darker: 159, 117, 96;
+
+	--ink-rust: 229, 121, 67;
+	--ink-rust-darker: 215, 91, 29;
+
+	--ink-magenta: 233, 53, 134;
+	--ink-magenta-darker: 211, 23, 108;
+
+	--ink-purple: 118, 86, 245;
+	--ink-purple-darker: 79, 38, 242;
+
+	--ink-slate: 96, 125, 159;
+	--ink-slate-darker: 77, 100, 128;
+
+	--ink-teal: 0, 179, 179;
+	--ink-teal-darker: 0, 128, 128;
+
+	--ink-olive: 124, 159, 96;
+	--ink-olive-darker: 86, 112, 67;
+
+	--ink-color: var(--ink-primary);
+	--ink-color-darker: var(--ink-primary-darker);
+
+	--ink-background: var(--ink-white);
+	--ink-foreground: 82, 82, 82;
+
+	/* Base colors */
+	--color-neutral-50: rgba(var(--ink-neutral), 0.05);
+	--color-neutral-100: rgba(var(--ink-neutral), 0.1);
+	--color-neutral-200: rgba(var(--ink-neutral), 0.2);
+	--color-neutral-300: rgba(var(--ink-neutral), 0.4);
+	--color-neutral-400: rgba(var(--ink-neutral), 0.6);
+	--color-neutral-500: rgba(var(--ink-neutral), 0.75);
+	--color-neutral: rgb(var(--ink-neutral));
+	--color-neutral-muted: rgba(var(--ink-neutral), 0.4);
+	--color-neutral-tertiary: rgba(var(--ink-neutral), 0.6);
+	--color-neutral-secondary: rgba(var(--ink-neutral), 0.75);
+
+	--color-white-50: rgba(var(--ink-white), 0.05);
+	--color-white-100: rgba(var(--ink-white), 0.1);
+	--color-white-200: rgba(var(--ink-white), 0.2);
+	--color-white-300: rgba(var(--ink-white), 0.4);
+	--color-white-400: rgba(var(--ink-white), 0.6);
+	--color-white-500: rgba(var(--ink-white), 0.75);
+	--color-white: rgb(var(--ink-white));
+	--color-white-muted: rgba(var(--ink-white), 0.4);
+	--color-white-tertiary: rgba(var(--ink-white), 0.6);
+	--color-white-secondary: rgba(var(--ink-white), 0.75);
+
+	--color-abs-white-50: rgba(var(--ink-abs-white), 0.05);
+	--color-abs-white-100: rgba(var(--ink-abs-white), 0.1);
+	--color-abs-white-200: rgba(var(--ink-abs-white), 0.2);
+	--color-abs-white-300: rgba(var(--ink-abs-white), 0.4);
+	--color-abs-white-400: rgba(var(--ink-abs-white), 0.6);
+	--color-abs-white-500: rgba(var(--ink-abs-white), 0.75);
+	--color-abs-white: rgb(var(--ink-abs-white));
+	--color-abs-white-muted: rgba(var(--ink-abs-white), 0.4);
+	--color-abs-white-tertiary: rgba(var(--ink-abs-white), 0.6);
+	--color-abs-white-secondary: rgba(var(--ink-abs-white), 0.75);
+
+	--color-space-50: rgba(var(--ink-space), 0.05);
+	--color-space-100: rgba(var(--ink-space), 0.1);
+	--color-space-200: rgba(var(--ink-space), 0.2);
+	--color-space-300: rgba(var(--ink-space), 0.4);
+	--color-space-400: rgba(var(--ink-space), 0.6);
+	--color-space-500: rgba(var(--ink-space), 0.75);
+	--color-space: rgb(var(--ink-space));
+	--color-space-muted: rgba(var(--ink-space), 0.4);
+	--color-space-tertiary: rgba(var(--ink-space), 0.6);
+	--color-space-secondary: rgba(var(--ink-space), 0.75);
+
+	/* Semantic colors */
+	--color-primary-50: rgba(var(--ink-primary), 0.05);
+	--color-primary-100: rgba(var(--ink-primary), 0.1);
+	--color-primary-200: rgba(var(--ink-primary), 0.2);
+	--color-primary-300: rgba(var(--ink-primary), 0.4);
+	--color-primary-400: rgba(var(--ink-primary), 0.6);
+	--color-primary-500: rgba(var(--ink-primary), 0.8);
+	--color-primary-600: rgb(var(--ink-primary-darker));
+	--color-primary: rgb(var(--ink-primary));
+	--color-primary-muted: rgba(var(--ink-primary), 0.2);
+	--color-primary-tertiary: rgba(var(--ink-primary), 0.4);
+	--color-primary-secondary: rgba(var(--ink-primary), 0.6);
+
+	--color-success-50: rgba(var(--ink-success), 0.05);
+	--color-success-100: rgba(var(--ink-success), 0.1);
+	--color-success-200: rgba(var(--ink-success), 0.2);
+	--color-success-300: rgba(var(--ink-success), 0.4);
+	--color-success-400: rgba(var(--ink-success), 0.6);
+	--color-success-500: rgba(var(--ink-success), 0.8);
+	--color-success-600: rgb(var(--ink-success-darker));
+	--color-success: rgb(var(--ink-success));
+	--color-success-muted: rgba(var(--ink-success), 0.2);
+	--color-success-tertiary: rgba(var(--ink-success), 0.4);
+	--color-success-secondary: rgba(var(--ink-success), 0.6);
+
+	--color-failure-50: rgba(var(--ink-failure), 0.05);
+	--color-failure-100: rgba(var(--ink-failure), 0.1);
+	--color-failure-200: rgba(var(--ink-failure), 0.2);
+	--color-failure-300: rgba(var(--ink-failure), 0.4);
+	--color-failure-400: rgba(var(--ink-failure), 0.6);
+	--color-failure-500: rgba(var(--ink-failure), 0.8);
+	--color-failure-600: rgb(var(--ink-failure-darker));
+	--color-failure: rgb(var(--ink-failure));
+	--color-failure-muted: rgba(var(--ink-failure), 0.2);
+	--color-failure-tertiary: rgba(var(--ink-failure), 0.4);
+	--color-failure-secondary: rgba(var(--ink-failure), 0.6);
+
+	--color-destructive-50: rgba(var(--ink-failure), 0.05);
+	--color-destructive-100: rgba(var(--ink-failure), 0.1);
+	--color-destructive-200: rgba(var(--ink-failure), 0.2);
+	--color-destructive-300: rgba(var(--ink-failure), 0.4);
+	--color-destructive-400: rgba(var(--ink-failure), 0.6);
+	--color-destructive-500: rgba(var(--ink-failure), 0.8);
+	--color-destructive-600: rgb(var(--ink-failure-darker));
+	--color-destructive: rgb(var(--ink-failure));
+	--color-destructive-muted: rgba(var(--ink-failure), 0.2);
+	--color-destructive-tertiary: rgba(var(--ink-failure), 0.4);
+	--color-destructive-secondary: rgba(var(--ink-failure), 0.6);
+
+	--color-warning-50: rgba(var(--ink-warning), 0.05);
+	--color-warning-100: rgba(var(--ink-warning), 0.1);
+	--color-warning-200: rgba(var(--ink-warning), 0.2);
+	--color-warning-300: rgba(var(--ink-warning), 0.4);
+	--color-warning-400: rgba(var(--ink-warning), 0.6);
+	--color-warning-500: rgba(var(--ink-warning), 0.8);
+	--color-warning-600: rgb(var(--ink-warning-darker));
+	--color-warning: rgb(var(--ink-warning));
+	--color-warning-muted: rgba(var(--ink-warning), 0.2);
+	--color-warning-tertiary: rgba(var(--ink-warning), 0.4);
+	--color-warning-secondary: rgba(var(--ink-warning), 0.6);
+
+	/* Mnemonic colors */
+	--color-brown-50: rgba(var(--ink-brown), 0.05);
+	--color-brown-100: rgba(var(--ink-brown), 0.1);
+	--color-brown-200: rgba(var(--ink-brown), 0.2);
+	--color-brown-300: rgba(var(--ink-brown), 0.4);
+	--color-brown-400: rgba(var(--ink-brown), 0.6);
+	--color-brown-500: rgba(var(--ink-brown), 0.8);
+	--color-brown-600: rgb(var(--ink-brown-darker));
+	--color-brown: rgb(var(--ink-brown));
+	--color-brown-muted: rgba(var(--ink-brown), 0.2);
+	--color-brown-tertiary: rgba(var(--ink-brown), 0.4);
+	--color-brown-secondary: rgba(var(--ink-brown), 0.6);
+
+	--color-rust-50: rgba(var(--ink-rust), 0.05);
+	--color-rust-100: rgba(var(--ink-rust), 0.1);
+	--color-rust-200: rgba(var(--ink-rust), 0.2);
+	--color-rust-300: rgba(var(--ink-rust), 0.4);
+	--color-rust-400: rgba(var(--ink-rust), 0.6);
+	--color-rust-500: rgba(var(--ink-rust), 0.8);
+	--color-rust-600: rgb(var(--ink-rust-darker));
+	--color-rust: rgb(var(--ink-rust));
+	--color-rust-muted: rgba(var(--ink-rust), 0.2);
+	--color-rust-tertiary: rgba(var(--ink-rust), 0.4);
+	--color-rust-secondary: rgba(var(--ink-rust), 0.6);
+
+	--color-magenta-50: rgba(var(--ink-magenta), 0.05);
+	--color-magenta-100: rgba(var(--ink-magenta), 0.1);
+	--color-magenta-200: rgba(var(--ink-magenta), 0.2);
+	--color-magenta-300: rgba(var(--ink-magenta), 0.4);
+	--color-magenta-400: rgba(var(--ink-magenta), 0.6);
+	--color-magenta-500: rgba(var(--ink-magenta), 0.8);
+	--color-magenta-600: rgb(var(--ink-magenta-darker));
+	--color-magenta: rgb(var(--ink-magenta));
+	--color-magenta-muted: rgba(var(--ink-magenta), 0.2);
+	--color-magenta-tertiary: rgba(var(--ink-magenta), 0.4);
+	--color-magenta-secondary: rgba(var(--ink-magenta), 0.6);
+
+	--color-purple-50: rgba(var(--ink-purple), 0.05);
+	--color-purple-100: rgba(var(--ink-purple), 0.1);
+	--color-purple-200: rgba(var(--ink-purple), 0.2);
+	--color-purple-300: rgba(var(--ink-purple), 0.4);
+	--color-purple-400: rgba(var(--ink-purple), 0.6);
+	--color-purple-500: rgba(var(--ink-purple), 0.8);
+	--color-purple-600: rgb(var(--ink-purple-darker));
+	--color-purple: rgb(var(--ink-purple));
+	--color-purple-muted: rgba(var(--ink-purple), 0.2);
+	--color-purple-tertiary: rgba(var(--ink-purple), 0.4);
+	--color-purple-secondary: rgba(var(--ink-purple), 0.6);
+
+	--color-slate-50: rgba(var(--ink-slate), 0.05);
+	--color-slate-100: rgba(var(--ink-slate), 0.1);
+	--color-slate-200: rgba(var(--ink-slate), 0.2);
+	--color-slate-300: rgba(var(--ink-slate), 0.4);
+	--color-slate-400: rgba(var(--ink-slate), 0.6);
+	--color-slate-500: rgba(var(--ink-slate), 0.8);
+	--color-slate-600: rgb(var(--ink-slate-darker));
+	--color-slate: rgb(var(--ink-slate));
+	--color-slate-muted: rgba(var(--ink-slate), 0.2);
+	--color-slate-tertiary: rgba(var(--ink-slate), 0.4);
+	--color-slate-secondary: rgba(var(--ink-slate), 0.6);
+
+	--color-teal-50: rgba(var(--ink-teal), 0.05);
+	--color-teal-100: rgba(var(--ink-teal), 0.1);
+	--color-teal-200: rgba(var(--ink-teal), 0.2);
+	--color-teal-300: rgba(var(--ink-teal), 0.4);
+	--color-teal-400: rgba(var(--ink-teal), 0.6);
+	--color-teal-500: rgba(var(--ink-teal), 0.8);
+	--color-teal-600: rgb(var(--ink-teal-darker));
+	--color-teal: rgb(var(--ink-teal));
+	--color-teal-muted: rgba(var(--ink-teal), 0.2);
+	--color-teal-tertiary: rgba(var(--ink-teal), 0.4);
+	--color-teal-secondary: rgba(var(--ink-teal), 0.6);
+
+	--color-olive-50: rgba(var(--ink-olive), 0.05);
+	--color-olive-100: rgba(var(--ink-olive), 0.1);
+	--color-olive-200: rgba(var(--ink-olive), 0.2);
+	--color-olive-300: rgba(var(--ink-olive), 0.4);
+	--color-olive-400: rgba(var(--ink-olive), 0.6);
+	--color-olive-500: rgba(var(--ink-olive), 0.8);
+	--color-olive-600: rgb(var(--ink-olive-darker));
+	--color-olive: rgb(var(--ink-olive));
+	--color-olive-muted: rgba(var(--ink-olive), 0.2);
+	--color-olive-tertiary: rgba(var(--ink-olive), 0.4);
+	--color-olive-secondary: rgba(var(--ink-olive), 0.6);
+
+	--color-background: rgb(var(--ink-background));
+	--color-background-50: rgba(var(--ink-background), 0.05);
+	--color-background-100: rgba(var(--ink-background), 0.1);
+	--color-background-200: rgba(var(--ink-background), 0.2);
+	--color-background-300: rgba(var(--ink-background), 0.4);
+	--color-background-400: rgba(var(--ink-background), 0.6);
+	--color-background-500: rgba(var(--ink-background), 0.8);
+	--color-background-muted: rgba(var(--ink-background), 0.2);
+	--color-background-tertiary: rgba(var(--ink-background), 0.4);
+	--color-background-secondary: rgba(var(--ink-background), 0.6);
+
+	--color-foreground: rgb(var(--ink-foreground));
+	--color-foreground-50: rgba(var(--ink-foreground), 0.05);
+	--color-foreground-100: rgba(var(--ink-foreground), 0.1);
+	--color-foreground-200: rgba(var(--ink-foreground), 0.2);
+	--color-foreground-300: rgba(var(--ink-foreground), 0.4);
+	--color-foreground-400: rgba(var(--ink-foreground), 0.6);
+	--color-foreground-500: rgba(var(--ink-foreground), 0.8);
+	--color-foreground-muted: rgba(var(--ink-foreground), 0.2);
+	--color-foreground-tertiary: rgba(var(--ink-foreground), 0.4);
+	--color-foreground-secondary: rgba(var(--ink-foreground), 0.6);
+
+	--color-color-50: rgba(var(--ink-color), 0.05);
+	--color-color-100: rgba(var(--ink-color), 0.1);
+	--color-color-200: rgba(var(--ink-color), 0.2);
+	--color-color-300: rgba(var(--ink-color), 0.4);
+	--color-color-400: rgba(var(--ink-color), 0.6);
+	--color-color-500: rgba(var(--ink-color), 0.8);
+	--color-color-600: rgb(var(--ink-color-darker));
+	--color-color: rgb(var(--ink-color));
+	--color-color-muted: rgba(var(--ink-color), 0.2);
+	--color-color-tertiary: rgba(var(--ink-color), 0.4);
+	--color-color-secondary: rgba(var(--ink-color), 0.6);
+
+	/* Shadows */
+	--shadow-solid: 0 2px 1px rgba(0, 0, 0, 0.1);
+
+	/* Animations */
+	--animate-wave: wave 400ms ease-out forwards;
+	--animate-loading-icon: loading-icon-animation 1000ms ease-out forwards;
+
+	--btn-padding: 4px;
+	--btn-size: 26px;
+}
+
+/* Navigation */
+
+body[data-doctype='text'] .main-nav.hasnotebookbar:not(.readonly),
+body[data-doctype='text'] #toolbar-wrapper {
+}
+
+/* Combobox */
+
+.ui-combobox {
+	background: white;
+	box-shadow: inset 0 1px 2px 0 var(--color-neutral-100);
+	transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ui-combobox .ui-combobox-content {
+	background: transparent;
+}
+
+.ui-combobox .ui-combobox-content:focus {
+	background: transparent;
+	outline: none;
+}
+
+.ui-combobox .ui-combobox-button {
+	background: transparent;
+	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	color: var(--color-primary);
+	border-radius: 5px;
+
+	padding-left: 15px;
+	margin: 2px;
+	height: 18px;
+}
+
+.ui-combobox .ui-combobox-button * {
+	line-height: 18px;
+}
+
+.ui-combobox .ui-combobox-button:hover {
+	background: var(--color-primary-100);
+	color: var(--color-primary-500);
+}
+
+.ui-combobox .ui-combobox-button:active {
+	background: var(--color-primary-200);
+	color: initial;
+}
+
+.ui-combobox .ui-combobox-button:focus {
+	background: transparent;
+	outline: none;
+}
+
+.ui-combobox:focus-within {
+	box-shadow: inset 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 0 0 2px var(--color-primary-300);
+	outline: none;
+}
+
+/* Button */
+.unotoolbutton {
+	background: transparent !important;
+	border: none !important;
+}
+
+.unotoolbutton .unobutton,
+.unotoolbutton .arrowbackground {
+	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	border-radius: 3px !important;
+}
+
+.unotoolbutton .unobutton.selected,
+.unotoolbutton .arrowbackground.selected {
+	background-color: var(--color-primary-200) !important;
+}
+
+.unotoolbutton .unobutton:hover,
+.unotoolbutton .unobutton:focus,
+.unotoolbutton .arrowbackground:hover,
+.unotoolbutton .arrowbackground:focus {
+	background-color: var(--color-primary-100) !important;
+}
+
+/* Specific Components */
+
+#fontnamecombobox-dropdown > form > .ui-dialog-content,
+#fontsizecombobox-dropdown > form > .ui-dialog-content {
+	max-height: 50vh;
+}
