@@ -605,6 +605,9 @@ COMMON_PARAMS = \
 	--o:child_root_path="@JAILS_PATH@" \
 	--o:cache_files.path="@CACHE_PATH@" \
 	--o:storage.filesystem[@allow]=true \
+	--o:storage.wopi[@allow]=true \
+	--o:storage.wopi.host[0]="api.k8s.orb.local" \
+	--o:storage.wopi.host[0][@allow]=true \
 	--o:ssl.cert_file_path="$(abs_top_srcdir)/etc/cert.pem" \
 	--o:ssl.key_file_path="$(abs_top_srcdir)/etc/key.pem" \
 	--o:ssl.ca_file_path="$(abs_top_srcdir)/etc/ca-chain.cert.pem" \
@@ -617,7 +620,7 @@ run: setup-wsd
 		(echo "WARNING: install podman to workaround this" && false); \
 	fi
 	$(ENABLE_NAMESPACE) ./coolwsd $(COMMON_PARAMS) \
-			--o:logging.file[@enable]=${OUTPUT_TO_FILE} --o:logging.level=trace \
+			--o:logging.file[@enable]=${OUTPUT_TO_FILE} --o:logging.level=information \
 			--o:logging_ui_cmd.file[@enable]=${OUTPUT_TO_FILE} \
 			--o:trace_event[@enable]=true
 

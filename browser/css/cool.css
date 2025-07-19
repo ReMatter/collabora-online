@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
 	/*All used fonts (except w2ui)
 	----------------------------------*/
-	--cool-font: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
+	--cool-font: Inter, sans-serif;
 	/*investigate what are the drawback in consisntly use --cool-fonts
 	for jquery-ui and perhaps mobile*/
-	--mobile-font: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
-	--jquery-ui-font: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	--mobile-font: Inter, sans-serif;
+	--jquery-ui-font: Inter, sans-serif;
 
 	--docs-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	--docs--pre-font: 'Consolas', 'Menlo', 'Lucida Console', 'Courier New', monospace;
@@ -13,7 +15,7 @@
 	/* Shared color for cell and selection border */
 	--cell-cursor-selection-border-color: var(--color-primary);
 
-	--btn-size: 28px;
+	--btn-size: 22px;
 	--btn-padding: 2px;
 	--btn-img-size: calc(var(--btn-size) - var(--btn-padding) * 2);
 	--btn-color-colorpicker-size: 4px;
@@ -32,13 +34,13 @@
 	--default-font-size: 0.75rem;
 	--header-font-size: 1rem;
 	/* tab min font-size */
-	--tb-min-fs: 0.6875rem;
+	--tb-min-fs: 0.75rem;
 	/* tab min font-size without units*/
-	--tb-min-fs-u: 11;
+	--tb-min-fs-u: 12;
 	/* tab max font-size */
-	--tb-max-fs: 1rem;
+	--tb-max-fs: 0.875rem;
 	/* tab max font-size without units*/
-	--tb-max-fs-u: 16;
+	--tb-max-fs-u: 14;
 	/* tab font-size preferred value or scaler */
 	--tb-fs-s: 1vw;
 

@@ -41,6 +41,10 @@ export class TilesSection extends CanvasSectionObject {
 		this.sectionProperties.pageBackgroundBorderColor = 'lightgrey';
 		this.sectionProperties.pageBackgroundTextColor = 'grey';
 		this.sectionProperties.pageBackgroundFont = String(40 * app.roundedDpiScale) + 'px Arial';
+		this.sectionProperties.pageBackgroundShadowColor = 'rgba(0, 0, 0, 0.3)';
+		this.sectionProperties.pageBackgroundShadowBlur = 10;
+		this.sectionProperties.pageBackgroundShadowOffsetX = 3;
+		this.sectionProperties.pageBackgroundShadowOffsetY = 3;
 
 		this.isJSDOM = typeof window === 'object' && window.name === 'nodejs';
 
@@ -303,10 +307,22 @@ export class TilesSection extends CanvasSectionObject {
 
 				rectangle = [Math.round(rectangle[0] * app.twipsToPixels), Math.round(rectangle[1] * app.twipsToPixels), Math.round(rectangle[2] * app.twipsToPixels), Math.round(rectangle[3] * app.twipsToPixels)];
 
-				this.context.fillRect(rectangle[0] - ctx.viewBounds.min.x + this.sectionProperties.pageBackgroundInnerMargin,
-					rectangle[1] - ctx.viewBounds.min.y + this.sectionProperties.pageBackgroundInnerMargin,
-					rectangle[2] - this.sectionProperties.pageBackgroundInnerMargin,
-					rectangle[3] - this.sectionProperties.pageBackgroundInnerMargin);
+				const x = rectangle[0] - ctx.viewBounds.min.x + this.sectionProperties.pageBackgroundInnerMargin;
+				const y = rectangle[1] - ctx.viewBounds.min.y + this.sectionProperties.pageBackgroundInnerMargin;
+				const width = rectangle[2] - this.sectionProperties.pageBackgroundInnerMargin;
+				const height = rectangle[3] - this.sectionProperties.pageBackgroundInnerMargin;
+
+				// Add drop shadow
+				this.context.save();
+				this.context.shadowColor = 'rgba(0, 0, 0, 0.3)';
+				this.context.shadowBlur = 10;
+				this.context.shadowOffsetX = 3;
+				this.context.shadowOffsetY = 3;
+
+				this.context.fillStyle = this.containerObject.getDocumentBackgroundColor();
+				this.context.fillRect(x, y, width, height);
+
+				this.context.restore();
 			}
 		}
 	}
